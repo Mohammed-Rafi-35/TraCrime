@@ -1,4 +1,9 @@
-* { margin: 0; padding: 0; user-select: none; font-family: 'roboto';}
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: 'roboto';
+}
 
 body {
     background-color: black;
@@ -11,6 +16,7 @@ body {
     background-color: rgba(29, 29, 29, 0.438);
     transition: all 0.5s ease;
 }
+
 .navbar .btn {
     display: none;
     padding: 10px;
@@ -19,24 +25,29 @@ body {
     width: fit-content;
     height: fit-content;
 }
+
 .navbar .btn:hover {
     background-color: rgba(128, 128, 128, 0.363);
 }
+
 .navbar .search {
     display: none;
 }
+
 .navbar .search:hover {
-    background-color: rgba(128, 128, 128, 0.363);
-    padding-right: 200px;
+    width: fit-content;
 }
+
 .navbar .link {
     color: grey;
     text-decoration: none;
     border-radius: 10px;
 }
+
 .navbar .link:hover {
     background-color: rgba(128, 128, 128, 0.26);
 }
+
 .navbar .primary {
     font-size: large;
     font-weight: 600;
@@ -51,17 +62,19 @@ body {
         flex-direction: column;
         overflow-y: hidden;
     }
+
     .navbar .btn {
         display: inline;
     }
-    .navbar .link{
+
+    .navbar .link {
         display: inline-table;
         margin-top: 15px;
         padding: 10px;
     }
 }
 
-@media (min-width: 600px) and (max-width: 1000px) {
+@media (min-width: 600px) {
     .navbar {
         display: flex;
         height: 4vh;
@@ -69,39 +82,36 @@ body {
         align-items: center;
         flex-direction: row;
     }
+
     .navbar .btn {
         display: none;
     }
+
     .navbar .search {
-        float: right;
         padding: 8px;
-        display: inline;
+        display: flex;
+        align-items: center;
         border-radius: 10px;
-        width: fit-content;
-        height: fit-content;
+        width: 25px;
+        height: 25px;
         margin-left: 10px;
         background-color: rgba(128, 128, 128, 0.26);
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
-    .navbar .link{
-        display: flex;
-        padding: 10px;
-        justify-content: center;
-    }
-}
 
-@media (min-width: 1000px) and (max-width: 1200px) {
-    .navbar {
-        display: flex;
-        height: 4vh;
+    .navbar .search input {
+        background-color: transparent;
         padding: 10px;
-        flex-direction: row;
+        border-radius: 10px;
+        border: 1px rgba(128, 128, 128, 0.301) solid;
+        margin-left: 15px;
+        width: 35vw
     }
-    .navbar .btn {
-        display: none;
-    }
-    .navbar .link{
+
+    .navbar .link {
         display: flex;
+        padding: 10px;
         justify-content: center;
-        padding: 10px;
     }
 }
