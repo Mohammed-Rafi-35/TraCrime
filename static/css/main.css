@@ -61,6 +61,16 @@ body {
     bottom: 5px;
     border-radius: 10px;
     padding: 10px;
+    display: flex;
+    overflow-y: scroll;
+}
+
+.card .title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-weight: 600;
+    font-size: x-large;
 }
 
 
