@@ -4,12 +4,11 @@ from firebase_admin import credentials, firestore
 
 app = Flask(__name__)
 
-# Initialize Firebase
-cred = credentials.Certificate("./tracrime.json")
-firebase_admin.initialize_app(cred)
+def initialize_firebase_app():
+    cred = credentials.Certificate('./tracrime.json')
+    firebase_admin.initialize_app(cred)
 
-# Initialize Firestore
-db = firestore.client()
+initialize_firebase_app()  
 
 @app.route('/')
 def home_html():
@@ -21,10 +20,11 @@ def about_html():
 
 @app.route('/recent crimes/')
 def recent_crimes_html():
-    # Example: Fetch data from Firestore
-    crimes = db.collection('Crime_Records').stream()
-    crime_list = [crime.to_dict() for crime in crimes]
-    return render_template('recent_crimes.html', title='Recent Crimes', crimes=crime_list)
+    return render_template('recent_crimes.html', title='Recent Crimes', crimes=crimes)
 
 if __name__ == '__main__':
+    db = firestore.client()
+    crimes_ref = db.collection('Crime_Records')
+    crimes = [doc.to_dict() for doc in crimes_ref.get()]
+    print( crimes )
     app.run(debug=True)

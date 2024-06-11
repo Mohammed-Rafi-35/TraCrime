@@ -5,12 +5,19 @@
 <div class="card">
     <div class="title">Recent Crime</div>
     <div class="content"></div>
+
+
+
+    <br><br><br>
+    <div style='color: white'>
+        Date: &nbsp;&nbsp; {{ crimes[-1]['Date'] }} <br>
+        Time: &nbsp;&nbsp; {{ crimes[-1]['Time'] }} <br>
+        Location: &nbsp;&nbsp; {{ crimes[-1]['Location'] }} <br>
+        City: &nbsp;&nbsp; {{ crimes[-1]['City'] }} <br><br>
+        <img src="{{ crimes[-1]['URL'] }}" alt="" style = 'width: 500px;'> 
+
+    </div>
+
 </div>
-
-
-{% for i in crimes %}
-    <br><br>
-    <div style='color: white'>{{ i }}</div>
-{% endfor %}
 
 {% endblock %}
