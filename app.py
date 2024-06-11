@@ -26,5 +26,6 @@ if __name__ == '__main__':
     db = firestore.client()
     crimes_ref = db.collection('Crime_Records')
     crimes = [doc.to_dict() for doc in crimes_ref.get()]
-    print( crimes )
-    app.run(debug=True)
+
+    app.run(host='172.31.99.224', port=5000,  debug=True)
+    # app.run(debug=True)
