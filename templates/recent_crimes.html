@@ -9,12 +9,12 @@
 
 
     <br><br><br>
-    <div style='color: white'>
-        Date: &nbsp;&nbsp; {{ crimes[-1]['Date'] }} <br>
-        Time: &nbsp;&nbsp; {{ crimes[-1]['Time'] }} <br>
-        Location: &nbsp;&nbsp; {{ crimes[-1]['Location'] }} <br>
-        City: &nbsp;&nbsp; {{ crimes[-1]['City'] }} <br><br>
-        <img src="{{ crimes[-1]['URL'] }}" alt="" style = 'width: 500px;'> 
+    <div style='color: white; display: flex; flex-direction: column; align-items: center;'>
+        <span>{{ crimes[-1]['Date'] }} <br> </span> 
+        <span>{{ crimes[-1]['Time'] }} <br> </span> 
+        <span>{{ crimes[-1]['Location'] }} <br> </span> 
+        <span>{{ crimes[-1]['City'] }} <br><br> </span> 
+        <img src="{{ crimes[-1]['URL'] }}" alt="" style = 'width: 500px; border-radius: 10px;'> 
 
     </div>
 
