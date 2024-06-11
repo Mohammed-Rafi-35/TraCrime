@@ -27,6 +27,7 @@ body {
 }
 .navbar .search:hover {
     background-color: rgba(128, 128, 128, 0.363);
+    padding-right: 200px;
 }
 .navbar .link {
     color: grey;
@@ -73,7 +74,7 @@ body {
     }
     .navbar .search {
         float: right;
-        padding: 10px;
+        padding: 8px;
         display: inline;
         border-radius: 10px;
         width: fit-content;
