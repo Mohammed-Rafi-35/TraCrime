@@ -1,0 +1,12 @@
+* { margin: 0; padding: 0; user-select: none; }
+
+body {
+    background-color: black;
+    background-image: url('../background/abstract-1.jpg');
+}
+
+.navbar {
+    background-color: rgba(29, 29, 29, 0.438);
+    height: 5vh;
+    backdrop-filter: blur(10px);
+}
