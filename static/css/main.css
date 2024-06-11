@@ -62,7 +62,12 @@ body {
     border-radius: 10px;
     padding: 10px;
     display: flex;
+    flex-direction: column;
     overflow-y: scroll;
+}
+
+.card::-webkit-scrollbar{
+    display: none;
 }
 
 .card .title {
@@ -71,8 +76,12 @@ body {
     justify-content: center;
     font-weight: 600;
     font-size: x-large;
+    margin-bottom: 30px;
 }
 
+.card .content {
+    margin: 10px;
+}
 
 @media (max-width: 600px) {
     .navbar {
