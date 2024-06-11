@@ -5,7 +5,7 @@ let navbar_expanded = false;
 
 navbar_btn.addEventListener('click', () => {
     if( navbar_expanded == false) {
-        navbar.style.height = '10vh';
+        navbar.style.height = '30vh';
         navbar_expanded = true;
     }
     else {

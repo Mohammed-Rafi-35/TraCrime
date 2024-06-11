@@ -25,6 +25,7 @@ body {
 .navbar .link {
     color: grey;
     text-decoration: none;
+    border-radius: 10px;
 }
 .navbar .link:hover {
     background-color: rgba(128, 128, 128, 0.26);
