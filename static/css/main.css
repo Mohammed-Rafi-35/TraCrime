@@ -22,6 +22,12 @@ body {
 .navbar .btn:hover {
     background-color: rgba(128, 128, 128, 0.363);
 }
+.navbar .search {
+    display: none;
+}
+.navbar .search:hover {
+    background-color: rgba(128, 128, 128, 0.363);
+}
 .navbar .link {
     color: grey;
     text-decoration: none;
@@ -55,6 +61,34 @@ body {
 }
 
 @media (min-width: 600px) and (max-width: 1000px) {
+    .navbar {
+        display: flex;
+        height: 4vh;
+        padding: 10px;
+        align-items: center;
+        flex-direction: row;
+    }
+    .navbar .btn {
+        display: none;
+    }
+    .navbar .search {
+        float: right;
+        padding: 10px;
+        display: inline;
+        border-radius: 10px;
+        width: fit-content;
+        height: fit-content;
+        margin-left: 10px;
+        background-color: rgba(128, 128, 128, 0.26);
+    }
+    .navbar .link{
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
     .navbar {
         display: flex;
         height: 4vh;
