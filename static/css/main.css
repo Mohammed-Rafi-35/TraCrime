@@ -88,26 +88,32 @@ body {
     }
 
     .navbar .search {
-        padding: 8px;
-        display: flex;
-        align-items: center;
-        border-radius: 10px;
         width: 25px;
         height: 25px;
+        padding: 8px;
+        display: flex;
         margin-left: 10px;
-        background-color: rgba(128, 128, 128, 0.26);
         overflow-x: hidden;
         overflow-y: hidden;
+        align-items: center;
+        border-radius: 10px;
+        transition: all 1s ease;
+        background-color: rgba(128, 128, 128, 0.26);
     }
 
     .navbar .search input {
         background-color: transparent;
         padding: 10px;
         border-radius: 10px;
-        border: 1px rgba(128, 128, 128, 0.301) solid;
+        border: none;
         margin-left: 15px;
         width: 35vw
     }
+
+    .navbar .search input:focus {
+        border: 3px rgba(128, 128, 128, 0.329) solid;
+        outline: none;
+      }
 
     .navbar .link {
         display: flex;
