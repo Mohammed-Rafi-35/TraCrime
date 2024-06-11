@@ -10,6 +10,9 @@ def home_html():
 def about_html():
     return render_template('about.html', title = 'About')
 
+@app.route('/recent crimes')
+def recent_crimes_html():
+    return render_template('recent_crimes.html', title = 'Recent Crimes')
 
 if __name__ == '__main__':
     app.run(debug=True)
