@@ -30,6 +30,10 @@ body {
 .navbar .link:hover {
     background-color: rgba(128, 128, 128, 0.26);
 }
+.navbar .primary {
+    font-size: large;
+    font-weight: 600;
+}
 
 
 @media (max-width: 600px) {
@@ -46,6 +50,23 @@ body {
     .navbar .link{
         display: inline-table;
         margin-top: 15px;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    .navbar {
+        display: flex;
+        height: 4vh;
+        padding: 10px;
+        flex-direction: row;
+    }
+    .navbar .btn {
+        display: none;
+    }
+    .navbar .link{
+        display: flex;
+        justify-content: center;
         padding: 10px;
     }
 }
