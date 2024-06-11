@@ -1,4 +1,4 @@
-* { margin: 0; padding: 0; user-select: none; }
+* { margin: 0; padding: 0; user-select: none; font-family: 'roboto';}
 
 body {
     background-color: black;
@@ -6,7 +6,45 @@ body {
 }
 
 .navbar {
-    background-color: rgba(29, 29, 29, 0.438);
-    height: 5vh;
+    color: grey;
     backdrop-filter: blur(10px);
+    background-color: rgba(29, 29, 29, 0.438);
+    transition: all 0.5s ease;
+}
+.navbar .btn {
+    display: none;
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.26);
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+}
+.navbar .btn:hover {
+    background-color: rgba(128, 128, 128, 0.363);
+}
+.navbar .link {
+    color: grey;
+    text-decoration: none;
+}
+.navbar .link:hover {
+    background-color: rgba(128, 128, 128, 0.26);
+}
+
+
+@media (max-width: 600px) {
+    .navbar {
+        display: flex;
+        height: 4.5vh;
+        padding: 10px;
+        flex-direction: column;
+        overflow-y: hidden;
+    }
+    .navbar .btn {
+        display: inline;
+    }
+    .navbar .link{
+        display: inline-table;
+        margin-top: 15px;
+        padding: 10px;
+    }
 }
